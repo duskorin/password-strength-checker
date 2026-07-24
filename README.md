@@ -7,6 +7,10 @@ A simple command-line tool built in Python that checks whether a password is str
 - At least one number
 - At least one uppercase letter
 - At least one symbol
+- Whether it's a commonly used/leaked password
+
+## Scoring
+Gives a score out of 4 based on the criteria above, plus a special warning if the password is found in a list of common weak passwords.
 
 ## How to run it
 1. Make sure you have Python installed
@@ -20,8 +24,10 @@ This was my first Python project. I learned about:
 - Generator expressions (`any()`)
 - Loops (`while True`)
 - Basic string methods
+- Lists and the `in` operator
+- f-strings
 
 ## Future improvements
-- Check against a list of common leaked passwords
-- Give a numeric strength score instead of just pass/fail
+- Load a much larger common-password list from a file instead of hardcoding it
 - Add a GUI version
+- Estimate time-to-crack based on password complexity
